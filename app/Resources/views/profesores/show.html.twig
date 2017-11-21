@@ -1,0 +1,59 @@
+{% extends 'layout.html.twig' %}
+
+{% block act2 %}active{% endblock %}
+
+{% block titulo %}
+Detalle de profesor
+{% endblock %}
+
+{% block body %}
+
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ profesore.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ profesore.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Apellidos</th>
+                <td>{{ profesore.apellidos }}</td>
+            </tr>
+            <tr>
+                <th>Edad</th>
+                <td>{{ profesore.edad }}</td>
+            </tr>
+            <tr>
+                <th>Fechanacimiento</th>
+                <td>{% if profesore.fechaNacimiento %}{{ profesore.fechaNacimiento|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Telefono</th>
+                <td>{{ profesore.telefono }}</td>
+            </tr>
+            <tr>
+                <th>Direccion</th>
+                <td>{{ profesore.direccion }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ profesore.email }}</td>
+            </tr>
+            <tr>
+                <th>Profesion</th>
+                <td>{{ profesore.profesion }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+
+            <a class="btn" href="{{ path('profesores_index') }}">Regresar</a>
+
+            <a class="btn btn-warning" href="{{ path('profesores_edit', { 'id': profesore.id }) }}">Editar</a>
+
+    </ul>
+{% endblock %}

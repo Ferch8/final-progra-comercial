@@ -1,0 +1,31 @@
+app_user:
+    resource: "@AppBundle/Controller/UserController.php"
+    type:     annotation
+
+app_profesores:
+    resource: "@AppBundle/Controller/ProfesoresController.php"
+    type:     annotation
+
+app_aula:
+    resource: "@AppBundle/Controller/AulaController.php"
+    type:     annotation
+
+asignacion:
+    resource: "@AppBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+curso:
+    resource: "@AppBundle/Resources/config/routing/curso.yml"
+    prefix:     /curso
+
+estudiantes:
+    resource: "@AppBundle/Resources/config/routing/estudiantes.yml"
+    prefix:     /estudiantes
+
+aula:
+    resource: "@AppBundle/Resources/config/routing/aula.yml"
+    prefix:     /aula

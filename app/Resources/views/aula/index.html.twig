@@ -1,0 +1,40 @@
+{% extends 'layout.html.twig' %}
+{% block act1 %}active{% endblock %}
+{% block titulo %}
+Listado de aulas
+{% endblock %}
+
+{% block body %}
+<ul>
+        <a class="btn btn-success" href="{{ path('aula_new') }}">Agregar aula</a>
+</ul>
+<div class="table-responsive table-full-width">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Edificio</th>
+                <th>Encargado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for aula in aulas %}
+            <tr>
+                <td>{{ aula.nombre }}</td>
+                <td>{{ aula.descripcion }}</td>
+                <td>{{ aula.edificio }}</td>
+                <td>{{ aula.encargado }}</td>
+                <td>
+                    <ul>
+                            <a class="btn btn-info" href="{{ path('aula_show', { 'id': aula.id }) }}">Ver</a>
+                            <a class="btn btn-warning" href="{{ path('aula_edit', { 'id': aula.id }) }}">Editar</a>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+  </div>
+{% endblock %}

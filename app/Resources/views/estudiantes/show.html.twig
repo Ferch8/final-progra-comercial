@@ -1,0 +1,60 @@
+{% extends 'layout.html.twig' %}
+
+{% block act4 %}active{% endblock %}
+
+{% block titulo %}
+Detalle de asignacion
+{% endblock %}
+
+{% block body %}
+
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ estudiante.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ estudiante.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Apellido</th>
+                <td>{{ estudiante.apellido }}</td>
+            </tr>
+            <tr>
+                <th>Edad</th>
+                <td>{{ estudiante.edad }}</td>
+            </tr>
+            <tr>
+                <th>Fechanacimiento</th>
+                <td>{% if estudiante.fechaNacimiento %}{{ estudiante.fechaNacimiento|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Carnet</th>
+                <td>{{ estudiante.carnet }}</td>
+            </tr>
+            <tr>
+                <th>Telefono</th>
+                <td>{{ estudiante.telefono }}</td>
+            </tr>
+            <tr>
+                <th>Direccion</th>
+                <td>{{ estudiante.direccion }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+
+            <a class="btn" href="{{ path('estudiantes_index') }}">Regresar</a>
+
+            <a class="btn btn-warning" href="{{ path('estudiantes_edit', { 'id': estudiante.id }) }}">Edit</a>
+
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

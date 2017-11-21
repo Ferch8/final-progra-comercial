@@ -1,0 +1,45 @@
+{% extends 'layout.html.twig' %}
+
+{% block act3 %}active{% endblock %}
+
+{% block titulo %}
+Listado de cursos
+{% endblock %}
+
+{% block body %}
+<ul>
+        <a class="btn btn-success" href="{{ path('curso_new') }}">Agregar curso</a>
+</ul>
+<div class="table-responsive table-full-width">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Fechacreacion</th>
+                <th>Horario</th>
+                <th>Observacion</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for curso in cursos %}
+            <tr>
+                <td>{{ curso.nombre }}</td>
+                <td>{{ curso.descripcion }}</td>
+                <td>{% if curso.fechaCreacion %}{{ curso.fechaCreacion|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ curso.horario }}</td>
+                <td>{{ curso.observacion }}</td>
+                <td>
+                    <ul>
+                            <a class="btn btn-info" href="{{ path('curso_show', { 'id': curso.id }) }}">Ver</a>
+                            <a class="btn btn-warning" href="{{ path('curso_edit', { 'id': curso.id }) }}">Editar</a>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}

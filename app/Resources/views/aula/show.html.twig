@@ -1,0 +1,40 @@
+{% extends 'layout.html.twig' %}
+
+{% block act1 %}active{% endblock %}
+
+{% block titulo %}
+Detalle de aula
+{% endblock %}
+
+{% block body %}
+
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ aula.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ aula.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Descripcion</th>
+                <td>{{ aula.descripcion }}</td>
+            </tr>
+            <tr>
+                <th>Edificio</th>
+                <td>{{ aula.edificio }}</td>
+            </tr>
+            <tr>
+                <th>Encargado</th>
+                <td>{{ aula.encargado }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+            <a class="btn" href="{{ path('aula_index') }}">Regresar</a>
+            <a class="btn btn-warning" href="{{ path('aula_edit', { 'id': aula.id }) }}">Editar</a>
+    </ul>
+{% endblock %}

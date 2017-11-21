@@ -1,0 +1,24 @@
+aula_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Aula:index" }
+    methods:  GET
+
+aula_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Aula:show" }
+    methods:  GET
+
+aula_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Aula:new" }
+    methods:  [GET, POST]
+
+aula_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:Aula:edit" }
+    methods:  [GET, POST]
+
+aula_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:Aula:delete" }
+    methods:  DELETE

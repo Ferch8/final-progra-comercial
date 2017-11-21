@@ -1,0 +1,29 @@
+app_curso:
+    resource: "@AppBundle/Resources/config/routing/curso.yml"
+    prefix:   /curso
+
+app_estudiantes:
+    resource: "@AppBundle/Resources/config/routing/estudiantes.yml"
+    prefix:   /estudiantes
+
+app_aula:
+    resource: "@AppBundle/Resources/config/routing/aula.yml"
+    prefix:   /aula
+
+app_profesores:
+    resource: "@AppBundle/Resources/config/routing/profesores.yml"
+    prefix:   /profesores
+
+app_home:
+    path:     /home
+    defaults: { _controller: AppBundle:Default:index }
+
+login:
+    path: /login
+    defaults: {_controller: AppBundle:User:login}
+
+login_check:
+    path: /login_check
+
+logout:
+    path: /logout

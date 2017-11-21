@@ -1,0 +1,24 @@
+profesores_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Profesores:index" }
+    methods:  GET
+
+profesores_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Profesores:show" }
+    methods:  GET
+
+profesores_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Profesores:new" }
+    methods:  [GET, POST]
+
+profesores_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:Profesores:edit" }
+    methods:  [GET, POST]
+
+profesores_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:Profesores:delete" }
+    methods:  DELETE

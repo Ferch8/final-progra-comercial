@@ -1,0 +1,298 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Curso
+ *
+ * @ORM\Table(name="curso")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\CursoRepository")
+ */
+class Curso
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombre", type="string", length=255)
+     */
+    private $nombre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="string", length=255)
+     */
+    private $descripcion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_creacion", type="datetime")
+     */
+    private $fechaCreacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="horario", type="string", length=255)
+     */
+    private $horario;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observacion", type="string", length=255)
+     */
+    private $observacion;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Estudiantes", inversedBy="cursos")
+     */
+    private $estudiantes;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Aula", inversedBy="curso")
+     * @ORM\JoinColumn(name="aula_id", referencedColumnName="id")
+     */
+    private $aula;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Profesores", inversedBy="curso")
+     * @ORM\JoinColumn(name="profesor_id", referencedColumnName="id")
+     */
+    private $profesor;
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nombre
+     *
+     * @param string $nombre
+     *
+     * @return Curso
+     */
+    public function setNombre($nombre)
+    {
+        $this->nombre = $nombre;
+
+        return $this;
+    }
+
+    /**
+     * Get nombre
+     *
+     * @return string
+     */
+    public function getNombre()
+    {
+        return $this->nombre;
+    }
+
+    /**
+     * Set descripcion
+     *
+     * @param string $descripcion
+     *
+     * @return Curso
+     */
+    public function setDescripcion($descripcion)
+    {
+        $this->descripcion = $descripcion;
+
+        return $this;
+    }
+
+    /**
+     * Get descripcion
+     *
+     * @return string
+     */
+    public function getDescripcion()
+    {
+        return $this->descripcion;
+    }
+
+    /**
+     * Set fechaCreacion
+     *
+     * @param \DateTime $fechaCreacion
+     *
+     * @return Curso
+     */
+    public function setFechaCreacion($fechaCreacion)
+    {
+        $this->fechaCreacion = $fechaCreacion;
+
+        return $this;
+    }
+
+    /**
+     * Get fechaCreacion
+     *
+     * @return \DateTime
+     */
+    public function getFechaCreacion()
+    {
+        return $this->fechaCreacion;
+    }
+
+    /**
+     * Set horario
+     *
+     * @param string $horario
+     *
+     * @return Curso
+     */
+    public function setHorario($horario)
+    {
+        $this->horario = $horario;
+
+        return $this;
+    }
+
+    /**
+     * Get horario
+     *
+     * @return string
+     */
+    public function getHorario()
+    {
+        return $this->horario;
+    }
+
+    /**
+     * Set observacion
+     *
+     * @param string $observacion
+     *
+     * @return Curso
+     */
+    public function setObservacion($observacion)
+    {
+        $this->observacion = $observacion;
+
+        return $this;
+    }
+
+    /**
+     * Get observacion
+     *
+     * @return string
+     */
+    public function getObservacion()
+    {
+        return $this->observacion;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->estudiantes = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add estudiante
+     *
+     * @param \AppBundle\Entity\Estudiantes $estudiante
+     *
+     * @return Curso
+     */
+    public function addEstudiante(\AppBundle\Entity\Estudiantes $estudiante)
+    {
+        $this->estudiantes[] = $estudiante;
+
+        return $this;
+    }
+
+    /**
+     * Remove estudiante
+     *
+     * @param \AppBundle\Entity\Estudiantes $estudiante
+     */
+    public function removeEstudiante(\AppBundle\Entity\Estudiantes $estudiante)
+    {
+        $this->estudiantes->removeElement($estudiante);
+    }
+
+    /**
+     * Get estudiantes
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getEstudiantes()
+    {
+        return $this->estudiantes;
+    }
+
+    public function __toString(){
+      return $this->nombre;
+    }
+
+    /**
+     * Set aula
+     *
+     * @param \AppBundle\Entity\Aula $aula
+     *
+     * @return Curso
+     */
+    public function setAula(\AppBundle\Entity\Aula $aula = null)
+    {
+        $this->aula = $aula;
+
+        return $this;
+    }
+
+    /**
+     * Get aula
+     *
+     * @return \AppBundle\Entity\Aula
+     */
+    public function getAula()
+    {
+        return $this->aula;
+    }
+
+    /**
+     * Set profesor
+     *
+     * @param \AppBundle\Entity\Profesores $profesor
+     *
+     * @return Curso
+     */
+    public function setProfesor(\AppBundle\Entity\Profesores $profesor = null)
+    {
+        $this->profesor = $profesor;
+
+        return $this;
+    }
+
+    /**
+     * Get profesor
+     *
+     * @return \AppBundle\Entity\Profesores
+     */
+    public function getProfesor()
+    {
+        return $this->profesor;
+    }
+}

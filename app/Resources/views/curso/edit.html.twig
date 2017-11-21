@@ -1,0 +1,73 @@
+{% extends 'layout.html.twig' %}
+
+{% block act3 %}active{% endblock %}
+
+{% block titulo %}
+Editar curso
+{% endblock %}
+
+{% block body %}
+
+
+{{ form_start(edit_form,{'attr':{'role':'form'}}) }}
+<div class="row">
+  <div class="col-md-5">
+      <div class="form-group">
+        {{form_label(edit_form.nombre,'Nombre')}}
+        {{ form_widget(edit_form.nombre,{'attr':{'class' : 'form-control border-input'}}) }}
+      </div>
+  </div>
+  <div class="col-md-5">
+      <div class="form-group">
+        {{form_label(edit_form.descripcion,'Descripcion')}}
+        {{ form_widget(edit_form.descripcion,{'attr':{'class' : 'form-control border-input'}}) }}
+      </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-5">
+      <div class="form-group">
+        {{form_label(edit_form.fechaCreacion,'fechaCreacion')}}
+        {{ form_widget(edit_form.fechaCreacion,{'attr':{'class' : 'form-control border-input'}}) }}
+      </div>
+  </div>
+  <div class="col-md-5">
+      <div class="form-group">
+        {{form_label(edit_form.horario,'horario')}}
+        {{ form_widget(edit_form.horario,{'attr':{'class' : 'form-control border-input'}}) }}
+      </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-5">
+      <div class="form-group">
+        {{form_label(edit_form.observacion,'observacion')}}
+        {{ form_widget(edit_form.observacion,{'attr':{'class' : 'form-control border-input'}}) }}
+      </div>
+  </div>
+  <div class="col-md-5">
+      <div class="form-group">
+        {{form_label(edit_form.aula,'aula')}}
+        {{ form_widget(edit_form.aula,{'attr':{'class' : 'selectpicker form-control border-input'}}) }}
+      </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-5">
+      <div class="form-group">
+        {{form_label(edit_form.profesor,'profesor')}}
+        {{ form_widget(edit_form.profesor,{'attr':{'class' : 'selectpicker form-control border-input'}}) }}
+      </div>
+  </div>
+</div>
+<div class="text-center">
+  <input type="submit" class="btn btn-info btn-fill btn-wd"  value="Guardar">
+</div>
+
+    {{ form_end(edit_form) }}
+
+
+    <ul>
+            <a class="btn" href="{{ path('curso_index') }}">Regresar</a>
+    </ul>
+{% endblock %}

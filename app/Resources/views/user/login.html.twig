@@ -1,0 +1,60 @@
+{% extends 'layout.html.twig' %}
+{% block titulo %}
+Ingresar
+{% endblock %}
+
+{% block body %}
+
+
+<div class="col-md-offset-4">
+  <div class="row">
+    <div class="col-md-5">
+      {% if error|length > 0 %}
+      <div class="alert alert-danger display-hide">
+        <button class="close" data-close="alert"></button>
+        <span>
+        Datos erróneos. Por favor, inténtelo otra vez. </span>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-offset-2">
+      <label for="">Login</label>
+    </div>
+  </div>
+
+<form class="" action="{{path('login_check')}}" method="post">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="form-group">
+        <label for="">Username</label>
+        <input type="text" id="username" name="_username" value="{{last_username}}" class="form-control border-input" />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-5">
+      <div class="form-group">
+        <label for="">Password</label>
+        <input type="password" id="password" name="_password" class="form-control border-input">
+      </div>
+    </div>
+  </div>
+
+<div class="row">
+  <div class="col-md-offset-1">
+    <input type="submit" value="Entrar" class="btn btn-info btn-fill btn-wd">
+    <input type="hidden" name="_target_path" value="/home">
+  </div>
+</div>
+
+<div class="clearfix">
+</div>
+
+</form>
+
+</div>
+
+{% endblock %}

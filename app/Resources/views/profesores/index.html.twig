@@ -1,0 +1,51 @@
+{% extends 'layout.html.twig' %}
+
+{% block act2 %}active{% endblock %}
+
+{% block titulo %}
+Listado de profesores
+{% endblock %}
+
+{% block body %}
+<ul>
+        <a class="btn btn-success" href="{{ path('profesores_new') }}">Agregar profesor</a>
+</ul>
+<div class="table-responsive table-full-width">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Edad</th>
+                <th>Fechanacimiento</th>
+                <th>Telefono</th>
+                <th>Direccion</th>
+                <th>Email</th>
+                <th>Profesion</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profesore in profesores %}
+            <tr>
+                <td>{{ profesore.nombre }}</td>
+                <td>{{ profesore.apellidos }}</td>
+                <td>{{ profesore.edad }}</td>
+                <td>{% if profesore.fechaNacimiento %}{{ profesore.fechaNacimiento|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ profesore.telefono }}</td>
+                <td>{{ profesore.direccion }}</td>
+                <td>{{ profesore.email }}</td>
+                <td>{{ profesore.profesion }}</td>
+                <td>
+                    <ul>
+                            <a class="btn btn-info" href="{{ path('profesores_show', { 'id': profesore.id }) }}">Ver</a>
+                            <a class="btn btn-warning" href="{{ path('profesores_edit', { 'id': profesore.id }) }}">Editar</a>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

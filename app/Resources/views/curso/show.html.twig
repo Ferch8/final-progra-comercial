@@ -1,0 +1,46 @@
+{% extends 'layout.html.twig' %}
+
+{% block act3 %}active{% endblock %}
+
+{% block titulo %}
+Detalle de curso
+{% endblock %}
+
+{% block body %}
+
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ curso.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ curso.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Descripcion</th>
+                <td>{{ curso.descripcion }}</td>
+            </tr>
+            <tr>
+                <th>Fechacreacion</th>
+                <td>{% if curso.fechaCreacion %}{{ curso.fechaCreacion|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Horario</th>
+                <td>{{ curso.horario }}</td>
+            </tr>
+            <tr>
+                <th>Observacion</th>
+                <td>{{ curso.observacion }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+
+            <a class="btn" href="{{ path('curso_index') }}">Regresar</a>
+            <a class="btn btn-warning" href="{{ path('curso_edit', { 'id': curso.id }) }}">Edit</a>
+
+    </ul>
+{% endblock %}
