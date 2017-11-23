@@ -28,6 +28,12 @@ security:
             logout:
                 path: /logout
                 target: /login
+
+    access_control:
+        - { path: ^/aula, roles: ROLE_ADMIN}
+        - { path: ^/estudiantes, roles: ROLE_ADMIN}
+        - { path: ^/profesores, roles: ROLE_ADMIN}
+        - { path: ^/curso, roles: ROLE_ADMIN}
             # activate different ways to authenticate
 
             # http_basic: ~

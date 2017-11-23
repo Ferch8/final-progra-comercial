@@ -23,46 +23,46 @@ class __TwigTemplate_077b373ccf8dd32bad93306bd23318cf67db3464e3f1993ee8c815532bd
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_acce1cd1af4de67749866dc6af98632fc7f287e9104a260ccafcc343cd0c98a0 = $this->env->getExtension("native_profiler");
-        $__internal_acce1cd1af4de67749866dc6af98632fc7f287e9104a260ccafcc343cd0c98a0->enter($__internal_acce1cd1af4de67749866dc6af98632fc7f287e9104a260ccafcc343cd0c98a0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "estudiantes/new.html.twig"));
+        $__internal_18a88e461800639f6a827786573a27bef4809a976c2c3db38b8fc0ee71dc6598 = $this->env->getExtension("native_profiler");
+        $__internal_18a88e461800639f6a827786573a27bef4809a976c2c3db38b8fc0ee71dc6598->enter($__internal_18a88e461800639f6a827786573a27bef4809a976c2c3db38b8fc0ee71dc6598_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "estudiantes/new.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_acce1cd1af4de67749866dc6af98632fc7f287e9104a260ccafcc343cd0c98a0->leave($__internal_acce1cd1af4de67749866dc6af98632fc7f287e9104a260ccafcc343cd0c98a0_prof);
+        $__internal_18a88e461800639f6a827786573a27bef4809a976c2c3db38b8fc0ee71dc6598->leave($__internal_18a88e461800639f6a827786573a27bef4809a976c2c3db38b8fc0ee71dc6598_prof);
 
     }
 
     // line 3
     public function block_act4($context, array $blocks = array())
     {
-        $__internal_9292a816e2b6509e94bde3feb023e8b4d36bc70064ca11f7b75ead97d589aaf0 = $this->env->getExtension("native_profiler");
-        $__internal_9292a816e2b6509e94bde3feb023e8b4d36bc70064ca11f7b75ead97d589aaf0->enter($__internal_9292a816e2b6509e94bde3feb023e8b4d36bc70064ca11f7b75ead97d589aaf0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "act4"));
+        $__internal_2edd333b438ed72794cd8ad2508b56e59afd1d45f1c8aed9f5d9b4176c47ee3e = $this->env->getExtension("native_profiler");
+        $__internal_2edd333b438ed72794cd8ad2508b56e59afd1d45f1c8aed9f5d9b4176c47ee3e->enter($__internal_2edd333b438ed72794cd8ad2508b56e59afd1d45f1c8aed9f5d9b4176c47ee3e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "act4"));
 
         echo "active";
         
-        $__internal_9292a816e2b6509e94bde3feb023e8b4d36bc70064ca11f7b75ead97d589aaf0->leave($__internal_9292a816e2b6509e94bde3feb023e8b4d36bc70064ca11f7b75ead97d589aaf0_prof);
+        $__internal_2edd333b438ed72794cd8ad2508b56e59afd1d45f1c8aed9f5d9b4176c47ee3e->leave($__internal_2edd333b438ed72794cd8ad2508b56e59afd1d45f1c8aed9f5d9b4176c47ee3e_prof);
 
     }
 
     // line 5
     public function block_titulo($context, array $blocks = array())
     {
-        $__internal_0776b485a3591d6c98c0e6c3e6c188986746d264e4ba21861d04a0a21a86e122 = $this->env->getExtension("native_profiler");
-        $__internal_0776b485a3591d6c98c0e6c3e6c188986746d264e4ba21861d04a0a21a86e122->enter($__internal_0776b485a3591d6c98c0e6c3e6c188986746d264e4ba21861d04a0a21a86e122_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "titulo"));
+        $__internal_1ca8f8333f6a83af092513d7d6912a744a53516c22095a663f35a3d543128d6b = $this->env->getExtension("native_profiler");
+        $__internal_1ca8f8333f6a83af092513d7d6912a744a53516c22095a663f35a3d543128d6b->enter($__internal_1ca8f8333f6a83af092513d7d6912a744a53516c22095a663f35a3d543128d6b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "titulo"));
 
         // line 6
         echo "Agregar asignacion
 ";
         
-        $__internal_0776b485a3591d6c98c0e6c3e6c188986746d264e4ba21861d04a0a21a86e122->leave($__internal_0776b485a3591d6c98c0e6c3e6c188986746d264e4ba21861d04a0a21a86e122_prof);
+        $__internal_1ca8f8333f6a83af092513d7d6912a744a53516c22095a663f35a3d543128d6b->leave($__internal_1ca8f8333f6a83af092513d7d6912a744a53516c22095a663f35a3d543128d6b_prof);
 
     }
 
     // line 9
     public function block_body($context, array $blocks = array())
     {
-        $__internal_7ba19c4b587b7e2ddf8b4bca9f71b1c4096edbd9a955a1eab2352b108dd1da53 = $this->env->getExtension("native_profiler");
-        $__internal_7ba19c4b587b7e2ddf8b4bca9f71b1c4096edbd9a955a1eab2352b108dd1da53->enter($__internal_7ba19c4b587b7e2ddf8b4bca9f71b1c4096edbd9a955a1eab2352b108dd1da53_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_8b02332df7d47c24c6c930a0edba66241767a573ae3dc7957415f6b2194bfb5f = $this->env->getExtension("native_profiler");
+        $__internal_8b02332df7d47c24c6c930a0edba66241767a573ae3dc7957415f6b2194bfb5f->enter($__internal_8b02332df7d47c24c6c930a0edba66241767a573ae3dc7957415f6b2194bfb5f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 10
         echo "
@@ -176,12 +176,15 @@ class __TwigTemplate_077b373ccf8dd32bad93306bd23318cf67db3464e3f1993ee8c815532bd
       </div>
   </div>
 </div>
+<br>
+<br>
+<br>
 <div class=\"text-center\">
   <input type=\"submit\" class=\"btn btn-info btn-fill btn-wd\"  value=\"Guardar\">
 </div>
 
     ";
-        // line 74
+        // line 77
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 
@@ -191,14 +194,14 @@ class __TwigTemplate_077b373ccf8dd32bad93306bd23318cf67db3464e3f1993ee8c815532bd
     <ul>
 
             <a class=\"btn\" href=\"";
-        // line 81
+        // line 84
         echo $this->env->getExtension('routing')->getPath("estudiantes_index");
         echo "\">Regresar</a>
 
     </ul>
 ";
         
-        $__internal_7ba19c4b587b7e2ddf8b4bca9f71b1c4096edbd9a955a1eab2352b108dd1da53->leave($__internal_7ba19c4b587b7e2ddf8b4bca9f71b1c4096edbd9a955a1eab2352b108dd1da53_prof);
+        $__internal_8b02332df7d47c24c6c930a0edba66241767a573ae3dc7957415f6b2194bfb5f->leave($__internal_8b02332df7d47c24c6c930a0edba66241767a573ae3dc7957415f6b2194bfb5f_prof);
 
     }
 
@@ -214,7 +217,7 @@ class __TwigTemplate_077b373ccf8dd32bad93306bd23318cf67db3464e3f1993ee8c815532bd
 
     public function getDebugInfo()
     {
-        return array (  195 => 81,  185 => 74,  174 => 66,  170 => 65,  162 => 60,  158 => 59,  148 => 52,  144 => 51,  136 => 46,  132 => 45,  122 => 38,  118 => 37,  110 => 32,  106 => 31,  96 => 24,  92 => 23,  84 => 18,  80 => 17,  73 => 13,  68 => 10,  62 => 9,  54 => 6,  48 => 5,  36 => 3,  11 => 1,);
+        return array (  198 => 84,  188 => 77,  174 => 66,  170 => 65,  162 => 60,  158 => 59,  148 => 52,  144 => 51,  136 => 46,  132 => 45,  122 => 38,  118 => 37,  110 => 32,  106 => 31,  96 => 24,  92 => 23,  84 => 18,  80 => 17,  73 => 13,  68 => 10,  62 => 9,  54 => 6,  48 => 5,  36 => 3,  11 => 1,);
     }
 }
 /* {% extends 'layout.html.twig' %}*/
@@ -286,6 +289,9 @@ class __TwigTemplate_077b373ccf8dd32bad93306bd23318cf67db3464e3f1993ee8c815532bd
 /*       </div>*/
 /*   </div>*/
 /* </div>*/
+/* <br>*/
+/* <br>*/
+/* <br>*/
 /* <div class="text-center">*/
 /*   <input type="submit" class="btn btn-info btn-fill btn-wd"  value="Guardar">*/
 /* </div>*/

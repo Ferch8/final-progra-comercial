@@ -36,5 +36,10 @@ Detalle de aula
     <ul>
             <a class="btn" href="{{ path('aula_index') }}">Regresar</a>
             <a class="btn btn-warning" href="{{ path('aula_edit', { 'id': aula.id }) }}">Editar</a>
+            <li>
+                {{ form_start(delete_form) }}
+                    <input class="btn btn-danger" type="submit" value="Delete">
+                {{ form_end(delete_form) }}
+            </li>
     </ul>
 {% endblock %}

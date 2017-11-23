@@ -41,6 +41,10 @@ Detalle de curso
 
             <a class="btn" href="{{ path('curso_index') }}">Regresar</a>
             <a class="btn btn-warning" href="{{ path('curso_edit', { 'id': curso.id }) }}">Edit</a>
-
+            <li>
+                {{ form_start(delete_form) }}
+                    <input class="btn btn-danger" type="submit" value="Delete">
+                {{ form_end(delete_form) }}
+            </li>
     </ul>
 {% endblock %}

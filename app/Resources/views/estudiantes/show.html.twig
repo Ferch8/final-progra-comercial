@@ -42,8 +42,18 @@ Detalle de asignacion
                 <th>Direccion</th>
                 <td>{{ estudiante.direccion }}</td>
             </tr>
+            <tr>
+                <th>Cursos</th>
+                <td>
+                  {% for curso in estudiante.cursos %}
+                  <li>{{curso.nombre}}</li>
+                  {% endfor %}
+                </td>
+            </tr>
         </tbody>
     </table>
+
+
 
     <ul>
 
@@ -51,10 +61,10 @@ Detalle de asignacion
 
             <a class="btn btn-warning" href="{{ path('estudiantes_edit', { 'id': estudiante.id }) }}">Edit</a>
 
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
+            <li>
+                {{ form_start(delete_form) }}
+                    <input class="btn btn-danger" type="submit" value="Delete">
+                {{ form_end(delete_form) }}
+            </li>
     </ul>
 {% endblock %}

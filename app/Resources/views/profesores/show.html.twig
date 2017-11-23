@@ -54,6 +54,10 @@ Detalle de profesor
             <a class="btn" href="{{ path('profesores_index') }}">Regresar</a>
 
             <a class="btn btn-warning" href="{{ path('profesores_edit', { 'id': profesore.id }) }}">Editar</a>
-
+            <li>
+                {{ form_start(delete_form) }}
+                    <input class="btn btn-danger" type="submit" value="Delete">
+                {{ form_end(delete_form) }}
+            </li>
     </ul>
 {% endblock %}
